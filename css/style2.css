@@ -267,10 +267,11 @@ svg {
 @media screen and (max-width: 768px) {
 
   .header {
+    margin: 0 auto;  /* Center horizontally on all screens */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    /* Stack elements vertically on small screens */
     gap: 0;
-    margin-left: 30px;
   }
 
   .header h1 {
@@ -284,7 +285,6 @@ svg {
 
   .header button {
     font-size: 15px;
-    margin: 20px 0px;
   }
 
   .container {
