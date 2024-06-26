@@ -15,8 +15,13 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/0rDpA4rFtnphO6Yhly5mF5Z0p2sMk6TII9Po8t"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+    integrity="sha384-6k1VZk26H8zjNZf7eXG3m/WuPvY6y6iETMt8TxFD82dJPbWIZO2k+JzK/TrVp4I7"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,21 +31,23 @@
     <div class="main" style="background-image: url('img/headersamar.png');">
       <header class="header-title">
         <div class="logo-bps">
-          <img src="img/logo.png" alt="Logo BPS" height="50" width="250" />
+          <img src="img/logo.png" alt="Logo BPS" />
+        </div>
+        <div class="logo-berakhlak">
+          <img src="img/berakhlak.png" alt="Logo berakhlak" />
         </div>
       </header>
-
       <div class="header">
         <h1>Layanan Terintegrasi <br> BPS Kota Balikpapan</h1>
         <h3>Akses cepat menuju berbagai layanan Badan Pusat Statistik Kota Balikpapan</h3>
-        <a href="#telusuri"><button> Telusuri</button></a>
+        <a href="#telusuri-position"><button> Telusuri</button></a>
       </div>
     </div>
 
     <!--Main-->
-    <section class="container">
+    <section class="container" id="telusuri-position">
       <!--Nav box-->
-      <div class="box" id="telusuri">
+      <div class="box" id="telusuri" data-aos="zoom-in-down" data-aos-duration="1500">
         <h2>PELAYANAN PUBLIK</h2>
         <div class="content">
           <h3>Jenis pelayanan yang diperuntukkan bagi masyarakat.</h3>
@@ -68,7 +75,7 @@
                     <path
                       d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5" />
                   </svg>
-                  <div class="card-name">Permintaan Data dan Konsultasi Statistik</div>
+                  <div class="card-name">Layanan Permintaan Data dan Konsultasi Statistik</div>
                 </div>
               </a>
             </div>
@@ -252,7 +259,7 @@
           <!-- Grid column -->
           <div class="fcolumn" id="logofooter">
             <!-- Content -->
-            <img src="img/logo.png" alt="Logo BPS" height="50" width="250" />
+            <img src="img/logo.png" alt="Logo BPS" height="45" width="200" />
           </div>
           <!-- Grid column -->
 
@@ -262,8 +269,9 @@
             <h6 class="text-uppercase fw-bold mb-4 ">
               Alamat
             </h6>
-            <p>
-              <a href="https://maps.app.goo.gl/etkHKSXBw8kFxNEA6" class="text-reset">Jl. Jenderal Sudirman No.84, Klandasan Ulu, Kec. Balikpapan Kota, Kota
+            <p class="mb-0">
+              <a href="https://maps.app.goo.gl/etkHKSXBw8kFxNEA6" class="text-reset">Jl. Jenderal Sudirman No.84,
+                Klandasan Ulu, Kec. Balikpapan Kota, Kota
                 Balikpapan, Kalimantan Timur 76112.</a>
             </p>
           </div>
@@ -288,19 +296,101 @@
         <!-- Grid row -->
       </div>
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text-center p-3" id="copyright" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2024
         <a class="text-white" href="https://balikpapankota.bps.go.id/">Badan Pusat Statistik Kota Balikpapan.</a>
         All Rights Reserved.
       </div>
     </section>
   </footer>
-  <!-- Footer -->
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Navigation Modal -->
+
+  <!-- Button -->
+  <button id="menuButton" data-toggle="modal" data-target="#myModal">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Navigasi</h4>
+        </div>
+
+        <!-- Navigation links -->
+        <div class="modal-body">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#diseminasi" data-dismiss="modal">Diseminasi Statistik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#konsultasi" data-dismiss="modal">Permintaan Data dan Konsultasi Statistik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#rekomendasi" data-dismiss="modal">Layanan Metadata dan Rekomendasi Statistik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pengaduan" data-dismiss="modal">Pengaduan</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Modal Close -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    AOS.init();
+    $(document).ready(function () {
+      var layananOffset = $('.layanan').offset().top;
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= layananOffset) {
+          $('#menuButton').fadeIn();
+        } else {
+          $('#menuButton').fadeOut();
+        }
+      });
+
+      // Close modal on 'X' button click
+      $('.btn-close').click(function () {
+        $('#myModal').modal('hide');
+      });
+
+      // Close modal when a nav-link is clicked
+      $('.nav-link').click(function () {
+        const that = this; // Store the clicked element (nav-link)
+        $('#myModal').modal('hide');
+        $('#myModal').on('hidden.bs.modal', function () { // Event after modal hides
+          window.location.href = that.href; // Navigate using the stored href
+        });
+      });
+    });
   </script>
+
+</body>
+
+</html>
+
+<!-- AOS JS -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

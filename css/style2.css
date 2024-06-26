@@ -1,3 +1,36 @@
+#menuButton {
+  display: none;
+  position: fixed;
+  bottom: 250px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #3ABEF9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Modal Styles */
+.modal-content {
+  position: relative;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
 body {
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,11 +46,25 @@ body {
   overflow: hidden;
 }
 
-.logo-bps {
+.logo-bps img {
+  height: 50px;
+  width: 250px;
   margin-top: 15px;
   margin-left: 20px;
   margin-bottom: 50px;
 }
+
+.logo-berakhlak img {
+  position: absolute; /* Position the image absolutely */
+  top: 0; /* Place it at the top of the container */
+  right: 0; /* Place it at the right of the container */
+  height: 85px;
+  width: 185px;
+  margin-top: 2px;
+  margin-right: 16px;
+  margin-bottom: 50px;
+}
+
 
 .header {
   align-items: flex-start;
@@ -209,6 +256,11 @@ body {
   padding: 0px 25px;
 }
 
+.btn{
+  font-weight: 500;
+  font-size: 14px;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -274,13 +326,33 @@ svg {
     gap: 0;
   }
 
+  .logo-bps img {
+    height: 29px;
+    width: 144px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 35px;
+  }
+
+  .logo-berakhlak img {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Place it at the top of the container */
+    right: 0; /* Place it at the right of the container */
+    height: 53px;
+    width: 111px;
+    margin-top: 0px;
+    margin-right: 6px;
+    margin-bottom: 35px;
+  }
+
   .header h1 {
     font-size: 35px;
   }
 
   .header h3 {
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
+    margin-bottom: 5px;
   }
 
   .header button {
@@ -293,10 +365,12 @@ svg {
 
   #telusuri {
     padding: 15px 30px;
+    margin-bottom: 0px;
   }
 
   .card-name {
     width: auto;
+    font-size: 15px;
   }
 
   .cards {
@@ -306,12 +380,27 @@ svg {
   }
 
   .layanan h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 50px;
+  }
+
+  .card-title{
+    font-size: 18px;
+  }
+
+  .card-text{
+    font-size: 14px;
+  }
+
+  .btn{
+    font-size: 12px;
+    font-weight: 500;
   }
 
   svg {
     align-items: center;
+    width: 40px;
+    height: 40px;
   }
 
   .frow {
@@ -324,6 +413,29 @@ svg {
   #logofooter {
     display: flex;
     justify-content: center;
-    width: 30px;
+    margin-right: 20px;
+  }
+
+  #menuButton {
+    bottom: 50px;
+    right: 10px;
+    width: 55px;
+    height: 55px;
+  }
+
+  #telusuri h2 {
+    font-size: 25px;
+    margin: 45px 0px 15px 0px;
+  }
+  
+  #telusuri h3 {
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .fcontainer p, h6, #copyright {
+    font-size: 13px;
   }
 }
