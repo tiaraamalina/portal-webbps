@@ -400,6 +400,7 @@ svg {
   }
 
   svg {
+    text-align: center;
     align-items: center;
     width: 40px;
     height: 40px;
