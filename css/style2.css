@@ -355,10 +355,10 @@ svg {
 
 #menuButton {
   position: fixed;
-  top: 300px;
+  bottom: 300px;
   right: 25px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: #4c3bcb;
   color: white;
   border: none;
@@ -395,11 +395,23 @@ svg {
   .card-name {
     width: auto;
     height: auto;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .cards {
     justify-content:space-between;
+  }
+
+  #menuButton{
+  top: 250px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  }
+
+  #logofooter img{
+    height: 45px;
+    width: 207px;
   }
 }
 
@@ -510,10 +522,10 @@ svg {
   }
 
   #menuButton {
-    bottom: 50px;
-    right: 30px;
-    width: 70px;
-    height: 70px;
+    top: 510px;
+    right: 12px;
+    width: 62px;
+    height: 62px;
   }
 
   #telusuri h2 {
