@@ -1,44 +1,14 @@
-#menuButton {
-  display: none;
-  position: fixed;
-  bottom: 300px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
-  background-color: #3ABEF9;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-/* Modal Styles */
-.modal-content {
-  position: relative;
-}
-
-.btn-close {
-  background: none;
-  border: none;
-  font-size: 24px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
 body {
   background-color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
 }
 
+/*-------------header/hero CSS------------------*/
 .main {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
@@ -47,8 +17,11 @@ body {
 }
 
 .logo-bps img {
-  height: 50px;
+  position:absolute;
+  height: 58px;
   width: 250px;
+  top: 0px;
+  left: 0px;
   margin-top: 15px;
   margin-left: 20px;
   margin-bottom: 50px;
@@ -65,39 +38,35 @@ body {
   margin-bottom: 50px;
 }
 
-
 .header {
-  align-items: flex-start;
-  margin-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: black;
-
 }
 
 .header h1 {
-  font-size: 60px;
+  font-size: 45px;
   text-align: center;
   position: relative;
   animation-name: this;
   animation-duration: 1.9s;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: white;
 }
 
 .header h3 {
-  font-size: 25px;
-  text-align: left;
+  font-size: 20px;
+  text-align: center;
   font-weight: 500;
   font-style: italic;
   color: white;
   position: relative;
+  padding: 15px;
   animation-name: this;
   animation-duration: 2.8s;
-  margin-bottom: 65px;
+  margin-bottom: 50px;
 }
 
 @keyframes this {
@@ -129,8 +98,8 @@ body {
   background-color: #3ABEF9;
   border-radius: 50px;
   color: white;
-  width: 200px;
-  font-size: 22px;
+  width: 160px;
+  font-size: 18px;
   padding: 10px 20px;
   margin: 50px 0px 50px 0px;
   justify-content: center;
@@ -180,17 +149,19 @@ body {
   background-color: #80C4E9;
 }
 
-.container {
+/*****************Content CSS*****************/
+.container-fluid {
   grid-area: main;
-  overflow-y: auto;
-  padding: 0px 10px;
+  overflow-x: hidden;
+  padding: 0px 50px;
 }
 
+/*---------------Navigation box-------------*/
 #telusuri {
   background-color: #4c3bcb;
   border-radius: 10px;
   color: white;
-  margin-top: 30px;
+  margin-top: 70px;
   width: 100%;
   padding: 20px 50px;
   display: flex;
@@ -209,6 +180,12 @@ body {
   margin-bottom: 40px;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
 .cards {
   display: flex;
   justify-content: center;
@@ -223,6 +200,10 @@ body {
   width: 280px;
   height: 90px;
   margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  padding: 0px 25px;
 }
 
 .cards .card {
@@ -236,44 +217,13 @@ body {
   border: none;
 }
 
-/*.card:hover {
-    background-color: #5745de;
-}*/
-
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 .menu .card:hover {
   background-color: #5d4cde;
 }
 
-.card-name {
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  padding: 0px 25px;
-}
-
-.btn{
-  font-weight: 500;
-  font-size: 14px;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-}
-
-.layanan h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-  margin-top: 90px;
-}
+/*.card:hover {
+    background-color: #5745de;
+}*/
 
 svg {
   width: 50px;
@@ -286,13 +236,58 @@ svg {
   vertical-align: middle;
 }
 
-.container {
-  overflow: hidden;
+/*---------------Layanan cards CSS-----------------*/
+.layanan .btn{
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  background-color:#3ABEF9;
+}
+
+.layanan .btn:hover{
+  background-color: #039ee6;
+}
+
+.layanan h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.layanan{
+  grid-area: main;
+  overflow-x: hidden;
+}
+
+.card{
+  width: 400px;
+  border-radius: 30px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.card-title{
+  font-size: 22px;
+}
+
+.card-text{
+  font-size: 17px;
 }
 
 .row {
+  padding-top: 20px;
   justify-content: center;
+  gap: 1px;
 }
+
+/*-------------Footer CSS--------------*/
 
 .fcontainer {
   margin-top: 50px;
@@ -300,21 +295,95 @@ svg {
 
 .frow {
   display: flex;
-  gap: 150px;
+  gap: 130px;
   justify-content: space-evenly;
   padding-top: 20px;
   margin-bottom: 20px;
 }
 
 .fcolumn {
-  width: 200px;
+  width: 250px;
   padding-top: 20px;
 }
 
-#logofooter {
+#logofooter img{
   padding-left: 20px;
+  width: 250px;
+  height: 55px;
 }
 
+/*--------------Navigation bar and button CSS-----------*/
+.nav-bar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  visibility: hidden;
+  width: 80%;
+  padding: 10px 20px;
+  background-color: #4c3bcb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav-bar li {
+  padding: 10px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+#menuButton {
+  position: fixed;
+  bottom: 300px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #4c3bcb;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+
+#menuButton.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modal-content {
+  position: relative;
+}
+
+.btn{
+  border-radius: 20px;
+}
 /* Responsive Styles */
 
 @media screen and (max-width: 768px) {
@@ -328,9 +397,9 @@ svg {
   }
 
   .logo-bps img {
-    height: 29px;
-    width: 144px;
-    margin-top: 15px;
+    height: 36px;
+    width: 145px;
+    margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 70px;
   }
@@ -339,8 +408,8 @@ svg {
     position: absolute; /* Position the image absolutely */
     top: 0; /* Place it at the top of the container */
     right: 0; /* Place it at the right of the container */
-    height: 53px;
-    width: 111px;
+    height: 55px;
+    width: 113px;
     margin-top: 0px;
     margin-right: 6px;
     margin-bottom: 70px;
@@ -358,11 +427,11 @@ svg {
   }
 
   .header button {
-    font-size: 15px;
+    font-size: 16px;
   }
 
-  .container {
-    padding: 20px;
+  .container-fluid {
+    padding: 0px 10px;
   }
 
   #telusuri {
@@ -372,7 +441,8 @@ svg {
 
   .card-name {
     width: auto;
-    font-size: 15px;
+    height: auto;
+    font-size: 16px;
   }
 
   .cards {
@@ -387,11 +457,11 @@ svg {
   }
 
   .card-title{
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .card-text{
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .btn{
@@ -415,15 +485,18 @@ svg {
 
   #logofooter {
     display: flex;
-    justify-content: center;
-    margin-right: 20px;
+  }
+  
+  #logofooter img{
+    height: 45px;
+    width: 207px;
   }
 
   #menuButton {
     bottom: 50px;
-    right: 10px;
-    width: 55px;
-    height: 55px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
   }
 
   #telusuri h2 {
@@ -432,13 +505,13 @@ svg {
   }
   
   #telusuri h3 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 10px;
   }
 
   .fcontainer p, h6, #copyright {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
