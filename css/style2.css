@@ -47,6 +47,7 @@ body {
 }
 
 .header h1 {
+  padding: 15px;
   font-size: 45px;
   text-align: center;
   position: relative;
@@ -315,7 +316,7 @@ svg {
 /*--------------Navigation bar and button CSS-----------*/
 .nav-bar {
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -324,7 +325,7 @@ svg {
   opacity: 0;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   visibility: hidden;
-  width: 80%;
+  width: 90%;
   padding: 10px 20px;
   background-color: #4c3bcb;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -399,7 +400,12 @@ svg {
   }
 
   .cards {
-    justify-content:space-between;
+    justify-content: center ;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
   }
 
   #menuButton{
@@ -499,8 +505,6 @@ svg {
   }
 
   svg {
-    text-align: center;
-    align-items: center;
     width: 40px;
     height: 40px;
   }
