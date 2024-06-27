@@ -355,10 +355,10 @@ svg {
 
 #menuButton {
   position: fixed;
-  bottom: 300px;
+  top: 300px;
   right: 25px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: #4c3bcb;
   color: white;
   border: none;
@@ -384,7 +384,24 @@ svg {
 .btn{
   border-radius: 20px;
 }
+
 /* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  #telusuri {
+    padding: 15px 30px;
+    margin-bottom: 0px;
+  }
+
+  .card-name {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+  }
+
+  .cards {
+    justify-content:space-between;
+  }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -431,7 +448,7 @@ svg {
   }
 
   .container-fluid {
-    padding: 0px 10px;
+    padding: 0px 15px;
   }
 
   #telusuri {
