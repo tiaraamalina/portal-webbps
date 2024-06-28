@@ -160,7 +160,7 @@ body {
 /*---------------Navigation box-------------*/
 #telusuri {
   background-color: #4c3bcb;
-  border-radius: 10px;
+  border-radius: 30px;
   color: white;
   margin-top: 70px;
   width: 100%;
@@ -243,6 +243,8 @@ svg {
   font-weight: 500;
   font-size: 15px;
   background-color:#3ABEF9;
+  width:200px;
+  margin-top: auto;
 }
 
 .layanan .btn:hover{
@@ -266,6 +268,12 @@ svg {
   border-radius: 30px;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card-img-top {
   width: 100%;
   height: 200px;
@@ -280,12 +288,20 @@ svg {
 
 .card-text{
   font-size: 17px;
+  flex-grow: 1;
 }
 
 .row {
   padding-top: 20px;
   justify-content: center;
-  gap: 1px;
+  gap: 2px;
+}
+
+.custom-spacing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust this value to change the spacing between the cards */
+  justify-content: center; /* Optional: Center cards horizontally */
 }
 
 /*-------------Footer CSS--------------*/
@@ -328,6 +344,7 @@ svg {
   width: 90%;
   padding: 10px 20px;
   background-color: #4c3bcb;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -347,11 +364,21 @@ svg {
 
 .nav-bar li {
   padding: 10px;
+  
 }
 
 .nav-bar a {
   color: white;
   text-decoration: none;
+}
+
+.nav-item svg{
+  width: 25px;
+  height: 25px;
+  margin-right: 0px;
+  background-color: #f0f0f0;
+  padding: 5px;
+  justify-content: center;
 }
 
 #menuButton {
@@ -394,7 +421,7 @@ svg {
   }
 
   .row{
-    gap: 5px;
+    gap: 2px;
   }
 
   .container-fluid {
@@ -417,10 +444,10 @@ svg {
   }
 
   #menuButton{
-  top: 250px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
+    top: 250px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
   }
 
   #logofooter img{
@@ -492,6 +519,10 @@ svg {
     flex-wrap: wrap;
     /* Wrap cards on smaller screens */
     justify-content: center;
+  }
+
+  .layanan .btn{
+    width: 150px ;
   }
 
   .layanan h2 {
