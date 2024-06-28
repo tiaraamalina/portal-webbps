@@ -393,6 +393,14 @@ svg {
     margin-bottom: 0px;
   }
 
+  .row{
+    gap: 5px;
+  }
+
+  .container-fluid {
+    padding: 0px 25px;
+  }
+
   .card-name {
     width: auto;
     height: auto;
