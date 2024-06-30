@@ -266,6 +266,7 @@ svg {
 .card{
   width: 400px;
   border-radius: 30px;
+  flex: 0 1 calc(100%);
 }
 
 .card-body {
@@ -292,16 +293,11 @@ svg {
 }
 
 .row {
+  display: flex;
   padding-top: 20px;
   justify-content: center;
-  gap: 2px;
-}
-
-.custom-spacing {
-  display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust this value to change the spacing between the cards */
-  justify-content: center; /* Optional: Center cards horizontally */
+  gap: 3px;
 }
 
 /*-------------Footer CSS--------------*/
@@ -421,7 +417,7 @@ svg {
   }
 
   .row{
-    gap: 2px;
+    gap: 10px;
   }
 
   .container-fluid {
