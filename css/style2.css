@@ -198,7 +198,7 @@ a {
 }
 
 .card-name {
-  width: 280px;
+  width: 240px;
   height: 90px;
   margin-top: 20px;
   font-size: 20px;
@@ -253,9 +253,9 @@ svg {
 
 .layanan h2 {
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
-  margin-top: 65px;
+  margin-top: 60px;
 }
 
 .layanan{
@@ -339,7 +339,7 @@ svg {
   visibility: hidden;
   width: 100%;
   background-color: #4c3bcb;
-  padding: 2px;
+  padding: 4px;
   border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -354,7 +354,8 @@ svg {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 25px;
   width: 100%;
 }
 
@@ -432,6 +433,11 @@ svg {
 
   .cards {
     justify-content: center ;
+  }
+
+  .layanan h2 {
+    font-size: 32px;
+    margin-top: 20px;
   }
 
   svg {
