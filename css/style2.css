@@ -267,6 +267,8 @@ svg {
   width: 400px;
   border-radius: 30px;
   flex: 0 1 calc(100%);
+  border: 1px solid #ccc;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0); /* Very small shadow */
 }
 
 .card-body {
@@ -281,6 +283,7 @@ svg {
   object-fit: cover;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  display: block;
 }
 
 .card-title{
