@@ -255,7 +255,7 @@ svg {
   font-size: 35px;
   margin-bottom: 20px;
   text-align: center;
-  margin-top: 90px;
+  margin-top: 65px;
 }
 
 .layanan{
@@ -328,7 +328,7 @@ svg {
 /*--------------Navigation bar and button CSS-----------*/
 .nav-bar {
   position: fixed;
-  top: 15px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -337,10 +337,10 @@ svg {
   opacity: 0;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   visibility: hidden;
-  width: 90%;
-  padding: 10px 20px;
+  width: 100%;
   background-color: #4c3bcb;
-  border-radius: 30px;
+  padding: 2px;
+  border-radius: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -359,8 +359,8 @@ svg {
 }
 
 .nav-bar li {
-  padding: 10px;
-  
+  padding: 2px;
+  font-size: 14px;
 }
 
 .nav-bar a {
