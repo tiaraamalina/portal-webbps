@@ -253,7 +253,7 @@ svg {
 
 .layanan h2 {
   font-size: 35px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   text-align: center;
   margin-top: 60px;
 }
@@ -294,7 +294,6 @@ svg {
 
 .row {
   display: flex;
-  padding-top: 15px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 3px;
