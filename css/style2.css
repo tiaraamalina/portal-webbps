@@ -294,7 +294,7 @@ svg {
 
 .row {
   display: flex;
-  padding-top: 20px;
+  padding-top: 15px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 3px;
